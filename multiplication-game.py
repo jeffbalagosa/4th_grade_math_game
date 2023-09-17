@@ -2,7 +2,7 @@ import random
 import os
 
 
-def generate_math_problem():
+def generate_mul_problem():
     # Generate random numbers for the problem
     num1 = random.randint(10, 99)
     num2 = random.randint(1, 9)
@@ -31,7 +31,7 @@ def math_game():
         print("============")
 
         # Generate a math problem
-        problem, answer = generate_math_problem()
+        problem, answer = generate_mul_problem()
 
         # Display the problem
         print(f"What is the answer to: {problem}?")

@@ -2,7 +2,7 @@ import random
 import os
 
 
-def generate_math_problem(operation):
+def generate_add_sub_problem(operation):
     if operation == "+":
         # Generate random numbers for addition problem
         num1 = random.randint(100, 999)  # Generate a 3-digit number
@@ -48,7 +48,7 @@ def math_game():
         operation = random.choice(["+", "-"])
 
         # Generate a math problem
-        problem, answer = generate_math_problem(operation)
+        problem, answer = generate_add_sub_problem(operation)
 
         # Display the problem
         print(f"What is the answer to: {problem}?")
