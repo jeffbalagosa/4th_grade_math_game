@@ -72,10 +72,9 @@ def math_game():
             print(f"Wrong! The correct answer is {answer}.")
             streak = 0
 
-        # Prompt the user to continue playing or quit
-        play_again = input("Play again? (y/n): ")
-        if play_again.lower() != "y":
-            break
+        # Prompt the user to press "Enter" to continue
+        # or press Ctrl + C to quit
+        input('Press "Enter" to continue.\nOr press Ctrl + C to quit.')
 
 
 # Run the math game
