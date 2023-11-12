@@ -64,7 +64,9 @@ def math_game():
         else:
             print(f"Wrong! The correct answer is {answer}.")
             streak = 0
-        input('Press "Enter" to continue.\nOr press Ctrl + C to quit.')
+        input(
+            'Press "Enter" to update streak and continue.\nOr press Ctrl + C to quit.'
+        )
 
 
 if __name__ == "__main__":
