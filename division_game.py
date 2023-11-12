@@ -3,48 +3,36 @@ import os
 
 
 def generate_div_problem():
-    # Generate random numbers for the problem
+    """
+    Generates a division problem with two random numbers between 10 and 99 and 1 and 9 respectively.
+    The first number is a multiple of the second number and the problem is returned as a string in the format "num1 ÷ num2".
+    The answer to the problem is also returned as an integer.
+    """
     num1 = random.randint(10, 99)
     num2 = random.randint(1, 9)
-
-    # Make sure the division results in a whole number
-    # Generate the dividend (num1)
     num1 = num2 * (random.randint(1, num1 // num2))
-
-    # Generate the problem as a string
     problem = f"{num1} ÷ {num2}"
-
-    # Calculate the correct answer
-    # Perform integer division to get the whole number answer
     answer = num1 // num2
-
-    # Return the problem and answer
     return problem, answer
 
 
 def math_game():
+    """
+    This function starts a math game that generates division problems and prompts the user to solve them.
+    The user's streak is tracked and the highest streak is recorded.
+    """
     streak = 0
     highest_streak = 0
 
     while True:
-        # Clear the terminal screen
         os.system("cls" if os.name == "nt" else "clear")
-
-        # Display the streak and highest streak
         print(f"Streak: {streak}")
         print(f"Highest Streak: {highest_streak}")
         print("============")
-
-        # Generate a math problem
         problem, answer = generate_div_problem()
-
-        # Display the problem
         print(f"What is the answer to: {problem}?")
-
-        # Get the user's answer
         user_answer = input("Enter your answer: ")
 
-        # Check if the answer is correct
         try:
             user_answer = int(user_answer)
         except ValueError:
@@ -60,11 +48,8 @@ def math_game():
             print(f"Wrong! The correct answer is {answer}.")
             streak = 0
 
-        # Prompt the user to press "Enter" to continue
-        # or press Ctrl + C to quit
         input('Press "Enter" to continue.\nOr press Ctrl + C to quit.')
 
 
-# Run the math game
 if __name__ == "__main__":
     math_game()
